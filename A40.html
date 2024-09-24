@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conformation Box</title>
+    <script>
+        function getConfirmation()
+        {
+            var retVal = confirm("Do you want to continue ? ");
+            if(retVal == true)
+            {
+                alert("uset wants to continue...!");
+                return true;
+            }
+            else{
+                alert("User does not want to continue");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="button" value="click" onclick="getConfirmation();">
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<script>
+    function Validation()
+    {
+        var name = document.forms["RegForm"]["Name"];
+        var email = document.forms["RegForm"]["email"];
+        var phone = document.forms["RegForm"]["phone"];
+        var what = document.forms["RegForm"]["what"];
+        var password = document.forms["RegForm"]["password"];
+        var Address = document.forms["RegForm"]["Address"];
+
+
+        if(name.value == "") 
+        {
+            window.alert("Please enter your name");
+            name.focus();
+            return false;
+
+        }  
+        if(Address.value == "")
+        {
+            window.alert("Please enter your Address");
+            Address.focus();
+            return false;
+
+        }  
+        if(email.value == "")
+        {
+            window.alert("Please enter your valid email address");
+            email.focus();
+            return false;
+
+        }  
+        if(email.value.indexOf(".",0)<0)
+        {
+            window.alert("Please enter your valid email address");
+            email.focus();
+            return false;
+
+        }
+        if(email.value.indexOf("@",0)<0)
+        {
+            window.alert("Please enter your valid email address");
+            email.focus();
+            return false;
+
+        }
+        if(phone.value == "")
+        {
+            window.alert("Please enter your valid email phone");
+            phone.focus();
+            return false;
+        }
+        if(password.value == "")
+        {
+            window.alert("Please enter your valid email password");
+            password.focus();
+
+            return false;    
+
+        } 
+        if(what.selectedIndex<1)
+        {
+            window.alert("Please enter your course");
+            what.focus();
+            return false;
+        }   
+        
+        return true;
+    }
+
+
+</script>
+<body>
+    <h1 style="text-align: center;"> REGISTRATION FORM</h1>
+    <form name="RegForm" action="/A1.html" onsubmit="return validation()" method="post">
+
+        <p> Name : <input type="text" size="65" name="Name" ></p><br>
+        <p> Address : <input type="text" size="65" name="Address" ></p><br>
+        <p> Email : <input type="text" size="65" name="email" ></p><br>
+        <p> password : <input type="text" size="65" name="password" ></p><br>
+        <p> phone : <input type="text" size="65" name="phone" ></p><br>
+
+        <p> SELECT YOUR COURSE
+            <select name="Subject" type="text" value="">
+                <option>BTECH</option>
+                <option>BBA</option>
+                <option>BCA</option>
+                <option>MCA</option>
+                <option>B.COM</option>
+                <option>Validation</option>
+            </select>
+        </p><br><br>
+        <p> Comments : <textarea name="Comment" cols="55"></textarea></p>
+        <p> <input type="submit" value="send" name="Submit">
+            <input type="reset" value="Reset" name="Reset"> 
+       </p>
+
+    </form>
+    
+</body>
+</html>

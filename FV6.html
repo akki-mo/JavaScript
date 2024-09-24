@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style type="text/css">
+        .reqError{
+            color: #FF0000;
+            font-weight: bold;
+        }
+    </style>
+        <script>
+        function checkReqFields()
+        {
+            var returnvalue;
+            var name = document.getElementById("txtName").value;
+            var address = document.getElementById("txtAddress").value;
+            var email = document.getElementById("txtEmail").value;
+            returnvalue = true;
+        
+        var regex = /^[a-zA-Z]+$/;
+        if(regex.test(name)== false)
+        {
+            document.getElementById("reqTxtName").innerHTML="* Name is Invalid.";
+            return false;
+
+        }
+        if(address.trim()== " ")
+        {
+            document.getElementById("reqTxtAddress").innerHTML="*Address is required.";
+            returnvalue=false;
+        }
+        var regex = /^(([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5}){1,25})+([;.](([a-zA-Z0-9_\-\.]+)@{[a-zA-Z0-9_\-\.]+0\.([a-zA-Z]{2,5}){1,25})+)*$/;
+        if(regex.test(email)==false)
+        {
+            document.getElementById("reTxtEmailInvalid").innerHTML = "* Email is Invalid";
+            returnvalue=false;
+
+
+        }
+             return returnvalue;
+       }
+
+
+    </script>
+    </head>
+    <body>
+        <h1> JavaScritpt - required Fields validator for textbox on Submit</h1>
+        <form onsubmit="return checkReqFields()">
+            <b> Enter Name : </b><br>
+            <input type="text" id="txtName">
+            <span id="reqTxtName" class="reqError"> </span><br>
+            <br>
+
+            <b>Enter Address : </b><br>
+            <input type="text" id="txtAddress">
+            <span id="reqTxtAddress" class="reqError"></span><br>
+            <br>
+
+            <b>Enter Email : </b><br>
+            <input type="text" id="txtEmail">
+
+            <span id="reqTxtEmailInvalid" class="reqError"></span><br>
+            <br>
+            <p><input type="submit" value="Submit"></p>
+            
+        </form>
+
+    </body>
+</html>

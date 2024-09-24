@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByTagname</title>
+</head>
+<script>
+    function countpara()
+    {
+        var totalpara = document.getElementsByTagName("p");
+        alert(totalpara.length);
+
+    }
+</script>
+<body>
+    <p> This is the paragraph</p>
+    <p> Here we are going to count total number of paragraphs by getElementsByTagName() method.</p>
+    <p>Lets see the simple example</p>
+    <button onclick="countpara()"> count paragraph</button>
+    
+</body>
+</html>

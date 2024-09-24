@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function with returniung datatype and without parameter</title>
+    <script type="text/javascript">
+        function AreaRect()
+        {
+            var length = parseInt(prompt("enter a length"));
+            var breadth = parseInt(prompt("enter a breadth"));
+            var area = length * breadth;
+            
+
+            return( area);
+
+
+
+        }
+        function AddNum()
+        {
+            var num1 = parseInt(prompt("enter a number1"));
+            var num2 = parseInt(prompt("enter a number2"));
+            var total = num1 + num2;
+
+            return(total)
+        }
+        function isEven(num)
+        {
+            var num = parseInt(prompt("Enter number"));
+            if (num % 2 == 0) {
+              return 0;
+            }
+            else
+             return 1;
+            
+          
+    
+        }
+        var ans = AreaRect();
+        document.write("Area is ",ans);
+        document.write("<br/>");
+        var ans1 = AddNum();
+        document.write("Total",ans1);
+        var ans2 = isEven();
+        if (ans2 ==0)
+        document.write("The number ", num, " is even");
+        else {
+        document.write("The number ", num, " is odd");
+    }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+        function AreaRect1()
+        {
+            var length = parseInt(prompt("Enter the length"));
+            var breadth = parseInt(prompt("Enter the breadth"));
+
+            var area= length*breadth;
+
+            document.write("area is " + area);
+        }
+        function AreaRect2(length, breadth)
+        {
+            var area= length*breadth;
+            document.write("area is " + area);
+        }
+        function AreaRect3()
+        {
+            var length = parseInt(prompt("Enter the length"));
+            var breadth = parseInt(prompt("Enter the breadth"));
+
+            var area= length*breadth;
+            return(area);
+        }
+        var ans = AreaRect3();
+        document.write(ans);
+        document.write("</br");
+        function AreaRect4()
+        {
+            var area = length*breadth;
+            return(area);
+        }
+        var ans = AreaRect4(8,9);
+        document.write(ans);
+
+
+    </script>
+<body>
+    <form>
+        <input type="button" onclick="AreaRect1()" value=" Area of Rectanglar">
+        <input type="button" onclick="AreaRect2(5,6)" value="Area of Rectangular">
+    </form>
+</body>    
+</body>
+</html>

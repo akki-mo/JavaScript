@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> javascript Regration Expression toString Method</title>
+</head>
+<body>
+    <script>
+        var str= "javascript is an intresting scripting language";
+        var re = new RegExp("script","g");
+
+
+
+        var result = re.toString(str);
+        document.write("test 1- returned value: " + result);
+
+
+        re = new RegExp("/","g");
+
+        var result = re.toString(str);
+        document.write("<br>test 2- returned value: " + result);
+
+
+
+    </script>
+    
+</body>
+</html>

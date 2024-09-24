@@ -1,0 +1,18 @@
+<script>
+    function calc_si()
+    {
+        var prin = document.getElementById("amount").value;
+        var yr = document.getElementById("year").value;
+        var roi = document.getElementById("rate").value;
+        var si = (prin*yr*roi)/100;
+        alert(si);
+
+
+    }
+</script>
+<form>
+    principal amount:<input type="text" name="amount" id="amount"><br>
+    Number of Years:<input type="text" name="year" id="year"><br>
+    Rate of interest:<input type="text" name="rate" id="rate"><br>
+    <input type="button" value="calcualte SI" onclick="calc_si()"/>
+</form>

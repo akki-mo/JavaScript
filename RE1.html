@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Regration Expration</title>
+</head>
+
+<body>
+    <script>
+        var re = new RegExp("I stay in pune");
+        if(re.ignoreCase) {
+            document.write("test1- ignorecase property is set");
+
+        }
+        else{
+            document.write("test1- ignorecse property is not set");
+        }
+        re = new RegExp("I stay in pune","i");
+
+        if(re.ignoreCase) {
+            document.write("<br>test2- ignorecase property is set");
+        }
+        else
+        {
+            document.write("<br>test2- ignorecse property is not set");
+        }
+    </script>
+    
+</body>
+</html>

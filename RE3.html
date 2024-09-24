@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Regration Expression Multipal property</title>
+</head>
+<body>
+    <script>
+        
+    
+        var re = new RegExp("string");
+
+       if(re.multiline)
+       {
+        document.write("test 1 -multiline property is set");
+       }
+       else
+       {
+        document.write("test 1- multiline property is not set");
+
+       }
+       re= new RegExp("string","m");
+
+       if(re.multiline)
+       {
+        document.write("<br>test 2- multiline property is set");
+       }
+       else
+       {
+        document.write("<br>test 2- multiline property is not set");
+
+       }
+
+    </script>
+    
+</body>
+</html>

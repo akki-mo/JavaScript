@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read  Cookies</title>
+    <script type="text/javascript">
+        function ReadCookie()
+        {
+            var allCookies = document.cookie;
+            alert("all Cookies : "+allCookies);
+
+            cookiearry = allCookies.split(";");
+            for(var i=0; i<cookiearry.length; i++)
+            {
+                name = cookiearry[i].split("=")[0];
+                value = cookiearry[i].split("=")[1];
+                alert("key is : "+name + "and value is : "+value);
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <form name="myform" action=" ">
+        <input type="button" value="Get Cookie" onclick="ReadCookie()">
+    </form>
+    
+</body>
+</html>

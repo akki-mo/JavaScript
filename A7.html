@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Scope of Variables</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var age =20;
+
+        function checkscope() {
+            
+            var age = 23;
+            age = age + 20;
+            document.write("<br/>");
+            document.write(age)
+
+        }
+        age =age + 10;
+        document.write("<br/>");
+        document.write(age)
+
+        function checkglobal(){
+            document.write(age)
+             
+        }
+        document.write("<br/>");
+
+
+        age = age-5;
+        document.write(age);
+    </script>
+</br>
+    <input type="button" onclick="checkscope()" value="check"
+</br>
+    <input type="button" onclick="checkglobal()" value="check1">
+
+    
+    
+</body>
+</html>

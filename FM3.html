@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation : Name validation</title>
+   
+</head>
+<body>
+    <script>
+        function check_Alpha(letters){
+            var regex =/^[a-zA-Z]+$/;
+            if(regex.test(letters.yourname.value) == false)
+            {
+                alert("name must be in a alphabet");
+                letters.yourname.focus();
+                return false;
+            }
+            if(letters.yourname.value == " ")
+            {
+                alert("name field cannot be left empty");
+                letters.yourname.focus();   
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <form  name="alphavalidate" method="post" onsubmit="return check_Alpha(this)">
+        Name : 
+        <input type="text" size="40" name="yourname">
+        <input type="submit" value="Submit">
+        <input type="reset">
+    </form>
+    
+</body>
+</html>

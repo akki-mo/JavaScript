@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function with returniung datatype and without parameter</title>
+    <script type="text/javascript">
+        function AreaRect(length,breadth)
+        {
+            var length = parseInt(prompt("enter a length"));
+            var breadth = parseInt(prompt("enter a breadth"));
+            var area = length * breadth;
+            
+
+            return( area);
+
+
+
+        }
+        function AddNum(num1,num2)
+        {
+            var num1 = parseInt(prompt("enter a number1"));
+            var num2 = parseInt(prompt("enter a number2"));
+            var total = num1 + num2;
+
+            return(total)
+        }
+   
+        
+        var ans = AreaRect(8,9);
+        document.write("Area is ",ans);
+        document.write("<br/>");
+        var ans1 = AddNum(5,6);
+        document.write("Total",ans1);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
